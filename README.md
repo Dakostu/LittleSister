@@ -10,7 +10,7 @@ This saves bandwidth.
 
 Firstly, **this program only works with Raspberry Pi Camera Modules**.
 
-You need to establish a network connection between two or more Raspberry Pis.
+You need to establish a network connection between two or more Raspberry Pis before installing LittleSister.
 
 One Pi has to be designated as the "master". This master will contain the Python scripts located in the "src/master" folder.
 
@@ -27,7 +27,7 @@ After copying the files, the result will (probably) be a star network topology i
 
 ### Slave Raspberry PI
 1. Change the settings in PictureSettings.py of source source code folder, if necessary.
-2. On a slave Raspberry Pi, launch **LaunchMaster.py**.
+2. On a slave Raspberry Pi, launch **LaunchSlave.py**.
 
 ## Python Dependencies
 
