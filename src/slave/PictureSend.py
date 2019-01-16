@@ -17,7 +17,8 @@ def Stream(camera):
 	numberOfShotFrames = 0
 	stream = io.BytesIO()
     
-    # a slave takes the frames in the following order:
+    # assuming that NUMBER_PFRAMES is not zero,
+    # aslave takes the frames in the following order:
     # [I] <- [P] <- [P] <- [P] <- [I]
     # (amount of P frames can be set in PictureSettings.py)
     # after taking an I frame, the slave sends the entire picture

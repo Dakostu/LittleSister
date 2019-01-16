@@ -28,8 +28,8 @@ def CompareIAndPFrames(IFrameStream, PFrameStream):
 			PFramePixel = PFrameMatrix.getpixel((y,x))
 			if IsPixelDifferent(IFramePixel, PFramePixel):
 				SendChunk(PFrameMatrix,x,y)
-			y = y + GRIDFACTOR
-		x = x + GRIDFACTOR
+			y += GRIDFACTOR
+		x += GRIDFACTOR
 		y = 0
 
 
