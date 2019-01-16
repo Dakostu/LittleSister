@@ -25,7 +25,7 @@ def Stream(camera):
 	for capture in camera.capture_continuous(stream, FILETYPE,use_video_port=True):		
 		stream.seek(0)
 		fileStream = stream.read()
-		if numberOfShotFrames == 0:
+		if NUMBER_PFRAMES == 0 or numberOfShotFrames == 0:
 			IFrame = fileStream
 			PrepareUDPPackage(1,IFrame)
 		else:
@@ -36,7 +36,8 @@ def Stream(camera):
 
 		stream.seek(0)
 		stream.truncate()
-		numberOfShotFrames = (numberOfShotFrames + 1) % NUMBER_PFRAMES
+		if NUMBER_PFRAMES != 0:
+            numberOfShotFrames = (numberOfShotFrames + 1) % NUMBER_PFRAMES
 
 def GetIPAddress():
 	sock = socket(AF_INET, SOCK_DGRAM)

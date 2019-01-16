@@ -16,7 +16,7 @@ PIXELDIFF       = 20  # threshold value of pixel color difference calculation
 r               = 0
 g               = 1
 b               = 2
-NUMBER_PFRAMES  = 10  # amount of pictures of shoot and send only diffs from
+NUMBER_PFRAMES  = 10  # set this value to 0 to shoot I frames only and disable difference calculation
 
 # network settings
 MASTER_IP       = "200.200.200.1"
