@@ -38,7 +38,7 @@ def Stream(camera):
 		stream.seek(0)
 		stream.truncate()
 		if NUMBER_PFRAMES != 0:
-            numberOfShotFrames = (numberOfShotFrames + 1) % NUMBER_PFRAMES
+			numberOfShotFrames = (numberOfShotFrames + 1) % NUMBER_PFRAMES
 
 def GetIPAddress():
 	sock = socket(AF_INET, SOCK_DGRAM)
